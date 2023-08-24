@@ -11,11 +11,11 @@ private myLocalVariable: string = 'can you read this?';
 
 private myCallBack(value: MyObject) {
   // callback runs in the context of execution
-  console.warn('myLocalVariable is NOT available', this.myLocalVariable);
+  console.warn('myLocalVariable is NOT available', this.myLocalVariable); // output: 'myLocalVariable is NOT available' null
 };
 
 private myCallBack = (value: MyObject) => {
   // callback runs in the context of declaration
-  console.warn('myLocalVariable is available now', this.myLocalVariable);
+  console.warn('myLocalVariable is available now', this.myLocalVariable); // output: 'myLocalVariable is available now' 'can you read this?'
 };
 ```
